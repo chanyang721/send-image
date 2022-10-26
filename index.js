@@ -1,11 +1,14 @@
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
 exports.get = function(event, context, callback) {
-  var contents = fs.readFileSync(`public${path.sep}index.html`);
-  var result = {
+  const contents = fs.readFileSync(`public${path.sep}index.html`);
+  
+  console.log(event)
+
+  const result = {
     statusCode: 200,
     body: contents.toString(),
     headers: {'content-type': 'text/html'}

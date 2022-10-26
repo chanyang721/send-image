@@ -9,5 +9,8 @@
     },
     "scripts": {
         "test": "mocha --recursive tests"
+    },
+    "dependencies": {
+        "axios": "^1.1.3"
     }
 }
